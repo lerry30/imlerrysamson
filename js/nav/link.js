@@ -36,7 +36,7 @@ export const scrollPage = () => {
         link.addEventListener('touchstart', (ev) => {
             ev.preventDefault();
             console.log('mobile touch triggered');
-            alert('mobile touch triggered');
+            // alert('mobile touch triggered');
         });
     }
 }
