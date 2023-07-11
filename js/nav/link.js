@@ -30,15 +30,7 @@ export const scrollPage = () => {
             defaultColor(links, defTextColor);
             // set selected nav link color to hightlight
             link.style.color = hightLightText;
-
-            console.log('desktop click');
         });
-
-        // mobile click event
-        // link.addEventListener('touchstart', (ev) => {
-        //     console.log('mobile touch triggered');
-        //     // alert('mobile touch triggered');
-        // });
     }
 }
 

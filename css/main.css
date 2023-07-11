@@ -55,7 +55,7 @@ header nav ul {
 }
 
 header nav ul li {
-    padding: 10px 0;
+    padding: 5px 0;
     display: flex;
     text-transform: uppercase;
     justify-content: right;
@@ -64,8 +64,8 @@ header nav ul li {
 header nav ul li .link {
     color: black;
     font-weight: bold;
-    cursor: pointer;
     color: var(--txt-prime);
+    padding: 10px;
 }
 
 header nav ul li .link:hover {
@@ -128,6 +128,7 @@ main {
     border: none;   
     background-color: rgba(255, 255, 255, 0.092);
     border-radius: 2px;
+    color: var(--txt-prime);
 }
 
 .contact form button {
