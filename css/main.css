@@ -136,6 +136,11 @@ main {
     color: var(--txt-highlight);
     border-radius: 2px;
     background-color: transparent;
+    cursor: pointer;
+}
+
+.contact form button:hover {
+    background-color: #0ae4d523;
 }
 
 /* footer */
