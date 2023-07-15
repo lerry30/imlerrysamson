@@ -10,6 +10,7 @@
     /* text colors */
     --txt-prime: rgba(255, 255, 255, 0.857);
     --txt-highlight: #0ae4d6;
+    --line-color: #32678887;
 }
 
 html {
@@ -62,7 +63,6 @@ header nav ul li {
 }
 
 header nav ul li .link {
-    color: black;
     font-weight: bold;
     color: var(--txt-prime);
     padding: 10px;
@@ -72,10 +72,17 @@ header nav ul li .link:hover {
     color: var(--txt-highlight);
 }
 
+header nav ul li .move-nav {
+    color: var(--txt-highlight);
+    border: 1px solid var(--txt-highlight);
+    border-radius: 6px;
+    padding: 10px;
+}
+
 header .line {
     width: 1px;
     height: 210px;
-    background-color: white;
+    background-color: #fcfcfc9e;
     margin-left: calc(100% - 20px);
 }
 
@@ -89,6 +96,68 @@ main {
     padding: 10px 0 0 10px;
 }
 
+/* titles */
+
+.title-container {
+    display: flex;
+}
+
+.title-container h1 {
+    font-size: clamp(22px, 3vw, 2.2em);
+    color: var(--txt-prime);
+}
+
+.title-container .line {
+    height: 1px;
+    flex-grow: 1;
+    background-color: var(--line-color);
+    margin: auto 0 auto 8px;
+}
+
+/* about */
+.about {
+    display: flex;
+    flex-direction: column;
+}
+
+.about h1 {
+    padding: 10px;
+}
+
+.about .about-content {
+    display: flex;
+    flex-direction: column;
+}
+
+.about .content p {
+    line-height: 28px;   /* within paragraph */
+    padding: 10px;
+}
+
+/* .about .about-content .content {} */
+/* .about .about-content .img-container {} */
+
+.about .about-content img {
+    margin: 10px;
+    width: 90%;
+    aspect-ratio: 1;
+    object-fit: cover;
+    object-position: 0 0;
+    border-radius: 8px;
+    border-top: 1px solid var(--txt-highlight);
+
+    -webkit-mask-image: linear-gradient(
+        rgb(0 0 0 / 1),
+        rgb(0 0 0 / 0.6) 60%,
+        rgb(0 0 0 /0)
+    );
+
+    mask-image: linear-gradient(
+        rgb(0 0 0 / 1),
+        rgb(0 0 0 / 0.6) 60%,
+        rgb(0 0 0 /0)
+    );
+}
 
 /* contact */
 
@@ -190,9 +259,16 @@ footer .accounts ul li a svg:hover {
 footer .git-repo a {
     color: var(--txt-prime);
     padding: 8px;
-    font-size: medium;
+    font-size: 3.2vw;
 }
 
 footer .git-repo a:hover {
     color: var(--txt-highlight);
+}
+
+
+@media only screen and (min-width: 600px) {
+    footer .git-repo a {
+        font-size: 14px;
+    }
 }
