@@ -18,6 +18,8 @@ export const sendMessage = () => {
 
         const result = await send(url, data);
         console.log(result);
+
+        // make modal for sent status
     });
 }
 

@@ -40,6 +40,7 @@ header {
     top: 0;
     right: 0;
     overflow: hidden;
+    z-index: 1;
 
     display: flex;
     flex-direction: column;
@@ -62,21 +63,30 @@ header nav ul li {
     justify-content: right;
 }
 
-header nav ul li .link {
+/* header nav ul li .link {} */
+header nav ul li .link:hover {
+    color: var(--txt-highlight);
+}
+
+header nav ul li > * {
     font-weight: bold;
     color: var(--txt-prime);
     padding: 10px;
 }
 
-header nav ul li .link:hover {
+header nav ul li .resume {
     color: var(--txt-highlight);
+    border: 1px solid var(--txt-highlight);
+    border-radius: 4px;
+    padding: 10px;
+    /* margin-right: 10px; */
 }
 
 header nav ul li .move-nav {
-    color: var(--txt-highlight);
-    border: 1px solid var(--txt-highlight);
-    border-radius: 6px;
-    padding: 10px;
+    color: var(--txt-prime);
+    border: none;
+    outline: none;
+    background-color: transparent;
 }
 
 header .line {
@@ -96,7 +106,7 @@ main {
     padding: 10px 0 0 10px;
 }
 
-/* titles */
+/* section titles */
 
 .title-container {
     display: flex;
@@ -112,6 +122,28 @@ main {
     flex-grow: 1;
     background-color: var(--line-color);
     margin: auto 0 auto 8px;
+}
+
+/* landing */
+
+.landing {
+    color: var(--txt-prime);
+    display: flex;
+    align-items: center;
+}
+
+.landing .text-content h1 {
+    font-size: clamp(22px, 3vw, 2.2em);
+}
+
+.landing .text-content > * {
+    padding: 10px;
+}
+
+/* projects */
+
+.projects > * {
+    padding: 10px;
 }
 
 /* about */
@@ -219,7 +251,7 @@ footer {
     width: 100%;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    /* justify-content: center; */
     align-items: center;
     position: relative;
 
