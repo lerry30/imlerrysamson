@@ -32,6 +32,7 @@ header nav ul li {
     display: flex;
     justify-content: flex-end;
     text-transform: uppercase;
+    cursor: pointer;
 }
 
 /* header nav ul li .link {} */
@@ -351,7 +352,7 @@ footer .accounts ul li a {
 }
 
 footer .accounts ul li a svg {
-    transition: all 0.2s ease-in;
+    transition: transform 0.2s ease-in;
 }
 
 footer .accounts ul li a svg:hover {

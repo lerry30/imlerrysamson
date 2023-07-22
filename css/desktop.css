@@ -94,12 +94,18 @@
         writing-mode: vertical-rl;
         text-orientation: mixed;
         /* margin-left: calc(100% - 36px); */
+        transition: transform 0.2s ease-in;
     }
 
     .desk-side-bar .line {
         /* margin-left: calc(100% - 20px); */
         height: 160px;
         margin: 0;
+    }
+
+    .desk-side-bar .email a:hover {
+        color: var(--txt-highlight);
+        transform: translate(0, -6px);
     }
 
 
